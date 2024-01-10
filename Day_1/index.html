@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>JS Drum Kit</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/Day_1/fg/icons8-music-notation-96.png" />
+    <link rel="icon" href="./fg/icons8-music-notation-96.png" />
 </head>
 
 <body>
@@ -61,28 +61,31 @@
     <audio data-key="75" src="sounds/tom.wav"></audio>
     <audio data-key="76" src="sounds/tink.wav"></audio>
 
-    <script>
-        function removeTransition(e) {
-            if (e.propertyName !== 'transform') return;//skip if it's not a transform
-            e.target.classList.remove('playing');
-        }
-        function playSound(e) {
-            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-            const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-            if (!audio) return;//it will stop the function from running
 
-            key.classList.add('playing');
-            audio.currentTime = 0;// rewind to the start (you can click in the same key consequently)
-            audio.play();
-        }
-
-        const keys = Array.from(document.querySelectorAll('.key'));
-        keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-        window.addEventListener('keydown', playSound);
-
-    </script>
+    <footer>
+        <script>
+            function removeTransition(e) {
+                if (e.propertyName !== 'transform') return;//skip if it's not a transform
+                e.target.classList.remove('playing');
+            }
+            function playSound(e) {
+                const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+                const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+                if (!audio) return;//it will stop the function from running
+    
+                key.classList.add('playing');
+                audio.currentTime = 0;// rewind to the start (you can click in the same key consequently)
+                audio.play();
+            }
+    
+            const keys = Array.from(document.querySelectorAll('.key'));
+            keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+            window.addEventListener('keydown', playSound);
+    
+        </script>
     <!-- Credits, icons, images... -->
     <div class="credits_misc">
+        <a href="https://archeana.github.io/JS30/">Back to main page</a>
         <a target="_blank" href="https://javascript30.com/">1/30 Days of JavaScript </a> <br>
         <a target="_blank" href="https://icons8.com/icon/113596/music-notation"></a> Icon by <a target="_blank"
             href="https://icons8.com">Icons8</a><br>
@@ -91,6 +94,7 @@
             Laskoski</a> on <a
             href="https://unsplash.com/photos/selective-focus-silhouette-photography-of-man-playing-red-lighted-dj-terminal-YrtFlrLo2DQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
         </div>
+    </footer>
 </body>
 
 </html>
