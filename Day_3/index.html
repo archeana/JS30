@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Variables+JS</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./icons8-paint-palette-96.png" />
+
+</head>
+
+<body>
+    <div class="navigation">
+        <a class="card previous-card" href="https://archeana.github.io/JS30/Day_2/index.html" onclick="goToPreviousProject()">
+            <span>Previous</span>
+        </a>
+        <a class="card home-card" href="https://archeana.github.io/JS30/" onclick="goToHomepage()">
+            <span>Home</span>
+        </a>
+        <a class="card next-card" href="#" onclick="goToNextProject()">
+            <span>Next</span>
+        </a>
+    </div>
+    
+    
+    <h2>Update CSS Variables with <span class="hl">JS</span></h2>
+
+    <div class="controls">
+        <label for="spacing">Spacing:</label>
+        <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+        <label for="blur">Blur:</label>
+        <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+
+        <label for="base">Base Color</label>
+        <input id="base" type="color" name="base" value="#ffc600">
+    </div>
+
+    <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+
+
+
+    <script>
+        function goToPreviousProject() {
+            // Logic to navigate to the previous project
+            console.log("Navigating to the previous project");
+        }
+
+        function goToHomepage() {
+            // Logic to navigate to the homepage
+            console.log("Navigating to the homepage");
+        }
+
+        function goToNextProject() {
+            // Logic to navigate to the next project
+            console.log("Navigating to the next project");
+        }
+        
+        const inputs = document.querySelectorAll('.controls input');
+
+        function handleUpdate() {
+            const suffix = this.dataset.sizing || '';
+            document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+
+        }
+
+        inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    </script>
+    <footer>
+        <a href="https://archeana.github.io/JS30/">Back to main page </a> <br>
+        <a target="_blank" href="https://javascript30.com/">3/30 Days of JavaScript </a> <br>
+        <a target="_blank" href="https://icons8.com/icon/8184/paint-palette">Favicon: Paint Palette icon by </a><a
+            target="_blank" href="https://icons8.com">Icons8</a>
+    </footer>
+</body>
+
+</html>
