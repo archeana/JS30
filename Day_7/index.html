@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Array Cardio 💪💪</title>
-  <link rel="icon" href="https://fav.farm/🔥" />
+  <title>Array Exercise 2 💪💪</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+  <div class="navigation">
+    <a class="card previous-card" href="https://archeana.github.io/JS30/Day_6/index.html"
+      onclick="goToPreviousProject()">
+      <span>Previous</span>
+    </a>
+    <a class="card home-card" href="https://archeana.github.io/JS30/" onclick="goToHomepage()">
+      <span>Home</span>
+    </a>
+    <a class="card next-card" href="https://archeana.github.io/JS30/Day_8/index.html" onclick="goToNextProject()">
+      <span>Next</span>
+    </a>
+  </div>
+  <br>
+
+
+
+  <p><em>Psst: have a look at the JavaScript Console or just skip to the next project</em> 💁</p>
   <script>
     // ## Array Cardio Day 2
 
@@ -27,16 +45,50 @@
 
     // Some and Every Checks
     // Array.prototype.some() // is at least one person 19 or older?
-    // Array.prototype.every() // is everyone 19 or older?
 
-    // Array.prototype.find()
-    // Find is like filter, but instead returns just the one you are looking for
-    // find the comment with the ID of 823423
+
+    // Array.prototype.some() // is at least one person 19?
+    // const isAdult = people.some(function(person) {
+    //   const currentYear = (new Date()).getFullYear();
+    //   if(currentYear - person.year >= 19) {
+    //     return true;
+    //   }
+    // });
+
+    const isAdult = people.some(person => ((new Date()).getFullYear()) - person.year >= 19);
+
+    console.log({ isAdult });
+
+    // Array.prototype.every() 
+
+    const allAdult = people.every(person => ((new Date()).getFullYear()) - person.year >= 19);
+
+    console.log({ allAdult });
+
+
+    // Array.prototype.find() - Find is like filter, but instead returns just the one you are looking for
+    // find the comment with the ID of 823423 - JavaScript Arrow Function
+
+    const comment = comments.find(comment => comment.id === 823423);
+
+    console.log(comment);
 
     // Array.prototype.findIndex()
     // Find the comment with this ID
-    // delete the comment with the ID of 823423
+
+    const index = comments.findIndex(comment => comment.id === 823423);
+    console.log(index);
+
+    //  // delete the comment with the ID of 823423
+    //       comments.slice(index, 1);
+    //       console.log(comments)
+    //spread ... operator
+    const newComments = [
+      ...comments.slice(0, index),
+      ...comments.slice(index + 1)
+    ];
 
   </script>
 </body>
+
 </html>
