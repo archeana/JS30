@@ -1,88 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>HTML5 Canvas</title>
-  <link rel="icon" href="https://fav.farm/✅" />
+  <link rel="shortcut icon" href="icons8-paint-color-96.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="navigation">
-    <a class="card previous-card" href="https://archeana.github.io/JS30/Day_5/index.html"
+    <a class="card previous-card" href="https://archeana.github.io/JS30/Day_7/index.html"
       onclick="goToPreviousProject()">
       <span>Previous</span>
     </a>
     <a class="card home-card" href="https://archeana.github.io/JS30/" onclick="goToHomepage()">
       <span>Home</span>
     </a>
-    <a class="card next-card" href="https://archeana.github.io/JS30/Day_7/index.html" onclick="goToNextProject()">
+    <a class="card next-card" href="https://archeana.github.io/JS30/Day_9/index.html" onclick="goToNextProject()">
       <span>Next</span>
     </a>
   </div>
   <br>
-  
-<canvas id="draw" width="800" height="800"></canvas>
-<script>
-const canvas = document.querySelector('#draw');
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-ctx.strokeStyle = '#BADA55';
-ctx.lineJoin = 'round';
-ctx.lineCap = 'round';
-ctx.lineWidth = 100;
-// ctx.globalCompositeOperation = 'multiply';
 
-let isDrawing = false;
-let lastX = 0;
-let lastY = 0;
-let hue = 0;
-let direction = true;
+  <h3>Start drawing! Click away ^-^</h3>
+  <canvas id="draw" width="800" height="800"></canvas>
+  <script>
+    const canvas = document.querySelector('#draw');
+    const ctx = canvas.getContext('2d');
+    // make the size of the window
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    // settings
+    ctx.strokeStyle = '#BADA55';
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+    ctx.lineWidth = 100;
+    ctx.globalCompositeOperation = 'multiply'
 
-function draw(e) {
-  if (!isDrawing) return; // stop the fn from running when they are not moused down
-  console.log(e);
-  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
-  ctx.beginPath();
-  // start from
-  ctx.moveTo(lastX, lastY);
-  // go to
-  ctx.lineTo(e.offsetX, e.offsetY);
-  ctx.stroke();
-  [lastX, lastY] = [e.offsetX, e.offsetY];
-
-  hue++;
-  if (hue >= 360) {
-    hue = 0;
-  }
-  if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
-    direction = !direction;
-  }
-
-  if(direction) {
-    ctx.lineWidth++;
-  } else {
-    ctx.lineWidth--;
-  }
-
-}
-
-canvas.addEventListener('mousedown', (e) => {
-  isDrawing = true;
-  [lastX, lastY] = [e.offsetX, e.offsetY];
-});
+    // only when you click is when you drawing and not when you are moving the mouse 
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
+    let hue = 0;
+    // so the line builts up -like thinner to more thick
+    let direction = true;
 
 
-canvas.addEventListener('mousemove', draw);
-canvas.addEventListener('mouseup', () => isDrawing = false);
-canvas.addEventListener('mouseout', () => isDrawing = false);
+    function draw(e) {
+      if (!isDrawing) return;
+      // console.log(e);
+      //start with colourfull line
+      ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+      // start from 
+      ctx.beginPath();
+      // go to
+      ctx.moveTo(lastX, lastY);
+      //
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.stroke();
+      //so it goes beyond
+      [lastX, lastY] = [e.offsetX, e.offsetY];
 
-</script>
+      // https://mothereffinghsl.com/ 
+      hue++;
+      // resets the colours
+      if (hue >= 360) {
+        hue = 0;
+      }
+      //width of the line does not go above the thickness)
+      if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+        direction = !direction;
+      }
 
-<style>
-  html, body {
-    margin: 0;
-  }
-</style>
+      if (direction) {
+        ctx.lineWidth++;
+      } else {
+        ctx.lineWidth--;
+      }
+
+    }
+
+
+    // mouse event but only when clicked 
+    // so the drawing only starts from 0 (conner of the window and not from where the mouse is located) also when you start 
+    // over it starts from your previous line and does not start a new one-- we update the first and last offset
+    canvas.addEventListener('mousedown', (e) => {
+      isDrawing = true;
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+    });
+
+    // stop the function from running when they did not click on the mouse
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', () => isDrawing = false);
+    canvas.addEventListener('mouseout', () => isDrawing = false);
+
+  </script>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+    }
+  </style>
 
 </body>
+<footer>
+  <!-- Credits, icons, images... -->
+  <div class="credits_misc">
+    <a target="_blank" href="https://icons8.com/icon/12941/paint">Paint</a> icon by <a target="_blank"
+      href="https://icons8.com">Icons8</a>
+  </div>
+</footer>
+
 </html>
