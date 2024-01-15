@@ -70,12 +70,25 @@ html {
       0 0 10px rgba(0, 0, 0, 0.2);
   }
 
+  .clock-numbers {
+    width: 30rem;
+    height: 30rem;
+    position: absolute;
+    font-size: 3rem;
+    color: #ffc600;
+}
+
+.clock-num {
+    position: absolute;
+    font-family: 'Lobster', sans-serif;
+}
+
   .clock-face {
     position: relative;
     width: 100%;
     height: 100%;
     transform: translateY(-3px);
-    /* account for the height of the clock hands */
+    /*! height of the clock hands */
   }
 
   .hand {
@@ -95,6 +108,92 @@ html {
 
   /*I just try a simple one*/
 
+
+  
+.second-hand {
+  width: 15rem;
+  height: 3px;
+  transform: translateX(1.5rem) rotate(90deg);
+}
+
+.hour-hand{
+  background-color: #ffc600;
+  height: 5px;
+
+  transform: translateX(6.9rem) rotate(90deg);
+}
+
+.min-hand{
+  background-color: #ff0055;
+
+  height: 2px;
+  transform: translateX(4.2rem) rotate(90deg);
+}
+
+footer {
+    margin-top: auto;
+}
+
+.deg0 {
+  /* 12 oclock */
+  transform: translateX(13.5rem) translateY(-4rem)
+}
+
+.deg30 {
+  /* 1 oclock */
+  transform: translateX(22rem) translateY(-2rem);
+
+}
+
+.deg60 {
+  /* 2 oclock */
+  transform: translateX(27rem) translateY(3rem);
+}
+
+.deg90 {
+  /* 3 oclock */
+  transform: translateX(29rem) translateY(10rem);
+}
+
+.deg120 {
+  /* 4 oclock */
+  transform: translateX(27rem) translateY(17rem);
+}
+
+.deg150 {
+  /* 5 oclock */
+  transform: translateX(22rem) translateY(22rem);
+}
+
+.deg180 {
+  /* 6 oclock */
+  transform: translateX(14rem) translateY(24rem);
+}
+
+.deg210 {
+  /* 7 oclock */
+  transform: translateX(7rem) translateY(22rem);
+}
+
+.deg240 {
+  /* 8 oclock */
+  transform: translateX(2rem) translateY(17rem);
+}
+
+.deg270 {
+  /* 9 oclock */
+  transform: translateX(0rem) translateY(10rem);
+}
+
+.deg300 {
+  /* 10 oclock */
+  transform: translateX(2rem) translateY(3rem);
+}
+
+.deg330 {
+  /* 11 oclock */
+  transform: translateX(7rem) translateY(-2rem);
+}
 
   .credits_misc{
   font-size: 1.5rem;
@@ -117,18 +216,4 @@ html {
 
 .credits_misc a:not(:last-child) {
     margin-right: 15px;
-}
-
-
-.hour-hand{
-  background-color: #ffc600;
-}
-
-.min-hand{
-  background-color: #ff0055;
-  width: 45%;
-}
-
-footer {
-    margin-top: auto;
 }
