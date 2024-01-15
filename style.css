@@ -72,6 +72,10 @@
      transform-style: preserve-3d;
  }
 
+ .flipped .card-inner {
+     transform: rotateY(180deg);
+ }
+
  .card-front,
  .card-back {
      width: 100%;
