@@ -14,3 +14,5 @@ Day 5: <a href="https://archeana.github.io/JS30/Day_5/index.html" target="_blank
 Day 6: <a href="https://archeana.github.io/JS30/Day_6/index.html" target="_blank">Ajax Type ahead </a><br>
 Day 7: <a href="https://archeana.github.io/JS30/Day_7/index.html" target="_blank">Array Exercises II</a><br>
 Day 8: <a href="https://archeana.github.io/JS30/Day_8/index.html" target="_blank">Draw on Canvas </a><br>
+Day 9: <a href="https://archeana.github.io/JS30/Day_9/index.html" target="_blank">DEV Tools - console </a><br>
+Day 10: <a href="https://archeana.github.io/JS30/Day_10/index.html" target="_blank">JS To Do List </a><br>
