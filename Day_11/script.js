@@ -1,4 +1,4 @@
-// * Get Our Elements */
+// * Get Elements */
 const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');
 const progress = player.querySelector('.progress');
@@ -37,7 +37,7 @@ function scrub(e) {
   video.currentTime = scrubTime;
 }
 
-/* Hook up the event listeners */
+/* connect the event listeners */
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
