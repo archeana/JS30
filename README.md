@@ -16,3 +16,7 @@ Day 7: <a href="https://archeana.github.io/JS30/Day_7/index.html" target="_blank
 Day 8: <a href="https://archeana.github.io/JS30/Day_8/index.html" target="_blank">Draw on Canvas </a><br>
 Day 9: <a href="https://archeana.github.io/JS30/Day_9/index.html" target="_blank">DEV Tools - console </a><br>
 Day 10: <a href="https://archeana.github.io/JS30/Day_10/index.html" target="_blank">JS To Do List </a><br>
+Day 11: <a href="https://archeana.github.io/JS30/Day_11/index.html" target="_blank">HTML Video Player</a><br>
+Day 12: <a href="https://archeana.github.io/JS30/Day_12/index.html" target="_blank">Key Sequence detection (secret code) </a><br>
+Day 13: <a href="https://archeana.github.io/JS30/Day_13/index.html" target="_blank">Slide in on scroll </a><br>
+Day 14: <a href="https://archeana.github.io/JS30/Day_14/index.html" target="_blank">arrays and object reference and copy </a><br>
