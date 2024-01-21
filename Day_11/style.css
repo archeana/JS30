@@ -115,7 +115,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    transform: translateY(100%) translateY(-5px);
+    transform: translateY(100%);
     transition: all .3s;
     flex-wrap: wrap;
     background: rgba(0,0,0,0.1);
