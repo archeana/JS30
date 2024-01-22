@@ -1,0 +1,125 @@
+html {
+    box-sizing: border-box;
+    background: url("https://images.unsplash.com/photo-1607891715106-ba61a2951650?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    text-align: center;
+    font-family: 'helvetica neue', sans-serif;
+    margin: 2%;
+}
+
+
+.navigation {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.card-back{
+    left: auto;
+}
+
+.card {
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    font-size: 20px;
+    background-color: #A2748B;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+img {
+    background: rgba(233, 169, 229, 0.9);
+    padding: 10px;
+    border-radius: 50%;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.wrapper {
+    padding: 20px;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+    font-weight: 200;
+}
+
+.plates {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+}
+
+.plates li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    font-weight: 100;
+    display: flex;
+}
+
+.plates label {
+    flex: 1;
+    cursor: pointer;
+}
+
+.plates input {
+    display: none;
+}
+
+.plates input+label:before {
+    content: "⬜️";
+    margin-right: 10px;
+}
+
+.plates input:checked+label:before {
+    content: "🌮";
+}
+
+.add-items {
+    margin-top: 20px;
+}
+
+.add-items input {
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
