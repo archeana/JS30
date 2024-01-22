@@ -39,10 +39,10 @@ function toggleDone(e) {
 addItems.addEventListener('submit', addItem);
 itemsList.addEventListener('click', toggleDone);
 
-populateList(items, itemsList); 
+populateList(items, itemsList);
 
 const clearResult = document.getElementById("clearButton");
 
-clearResult.addEventListener('click', function() {
-    itemsList.textContent = '';
+clearResult.addEventListener('click', function () {
+  itemsList.textContent = '';
 });
