@@ -5,7 +5,7 @@ body {
     background-size: cover;
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 .navigation {
@@ -45,15 +45,18 @@ body {
 }
 
 
-
+ul{
+    margin:auto;
+}
 
 
 #bands {
     list-style: inside;
+    margin-top: 10%;
     font-size: 20px;
     background: white;
-    width: 500px;
-    margin: auto;
+    width: 400px;
+    
     padding: 0;
     box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
 }
