@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Synthesis</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <a class="card previous-card" href="https://archeana.github.io/JS30/Day_22/index.html"
+            onclick="goToPreviousProject()">
+            <span>Previous</span>
+        </a>
+        <a class="card home-card" href="https://archeana.github.io/JS30/" onclick="goToHomepage()">
+            <span>Home</span>
+        </a>
+        <a class="card next-card" href="#" onclick="goToNextProject()">
+            <span>Next</span>
+        </a>
+    </div>
+    <br>
+    <div class="voiceinator">
+
+        <h1>The Voiceinator 5000</h1>
+
+        <select name="voice" id="voices">
+            <option value="">Select A Voice</option>
+        </select>
+
+        <label for="rate">Rate:</label>
+        <input name="rate" type="range" min="0" max="3" value="1" step="0.1">
+
+        <label for="pitch">Pitch:</label>
+
+        <input name="pitch" type="range" min="0" max="2" step="0.1">
+        <textarea name="text">Hello! I love JavaScript 👍</textarea>
+        <button id="stop">Stop!</button>
+        <button id="speak">Speak</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
