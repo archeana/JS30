@@ -1,0 +1,126 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #193549;
+}
+
+div {
+    width: 80%;
+    padding: 80px;
+    margin: 0 10%;
+}
+
+.one {
+    background: thistle;
+}
+
+.two {
+    background: mistyrose;
+}
+
+.three {
+    background: coral;
+}
+
+
+.navigation {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.card-back {
+    left: auto;
+}
+
+.card {
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    font-size: 20px;
+    background-color: #A2748B;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* alert */
+
+#alert-container {
+    position: relative;
+    width: 20%;
+}
+
+#alert {
+    display: none;
+    color: blue;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(245, 225, 146);
+    border-radius: 30px;
+    border-style: none;
+    position: absolute;
+    top: 0;
+    margin: 2% 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 2%;
+    text-align: center;
+    width: 40%;
+}
+
+#close {
+    position: absolute;
+    top: 5px;
+    left: 45%;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: none;
+    border-style: none;
+}
+
+#showAlertButton {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+    /* Make the button appear above the alert */
+
+}
+
+button {
+    margin: 0 45%;
+    border-radius: 50px;
+    padding: 2%;
+    color: blue;
+    background-color: aliceblue;
+    width: 10%;
+    cursor: pointer;
+    pointer-events: visible;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+}

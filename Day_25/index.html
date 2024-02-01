@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Understanding JavaScript's Capture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <nav class="navigation">
+        <a class="card previous-card" href="https://archeana.github.io/JS30/Day_21/index.html"
+            onclick="goToPreviousProject()">
+            <span>Previous</span>
+        </a>
+        <a class="card home-card" href="https://archeana.github.io/JS30/" onclick="goToHomepage()">
+            <span>Home</span>
+        </a>
+        <a class="card next-card" href="https://archeana.github.io/JS30/Day_23/index.html" onclick="goToNextProject()">
+            <span>Next</span>
+        </a>
+    </nav>
+    <div class="bod">
+        <div class="one">
+            <div class="two">
+                <div class="three">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- alert box  -->
+    <!-- want to customize the alert style, you should use your own 
+        custom alert box instead of the default browser's alert function. -->
+    <div id="alert" style="display: none; z-index:1000;">
+        Today is day 25 of WOMEN WHO CODE #DaysOfCode Challenge🚀
+         <button id="close" onclick="closeAlert()">X</button>
+    </div>
+    <button onclick="showAlert()">Here</button>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
