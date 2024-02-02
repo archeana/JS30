@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Follow Along Nav</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navigation">
+        <a class="card previous-card" href="https://archeana.github.io/JS30/Day_24/index.html"
+            onclick="goToPreviousProject()">
+            <span>Previous</span>
+        </a>
+        <a class="card home-card" href="https://archeana.github.io/JS30/" onclick="goToHomepage()">
+            <span>Home</span>
+        </a>
+        <a class="card next-card" href="#" onclick="goToNextProject()">
+            <span>Next</span>
+        </a>
+    </div>
+<br>
+  <h2></h2>
+  <nav class="top">
+    <div class="dropdownBackground">
+      <span class="arrow"></span>
+    </div>
+
+    <ul class="cool">
+      <li>
+        <a href="#">About Me</a>
+        <div class="dropdown dropdown1">
+          <div class="bio">
+            <img src="https://anajesus.netlify.app/ana_foto.png" width="50%">
+            <p>Hello👋, I'm Ana Jesus! I like to code, read and cook delicious vegan food!</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#">Projects</a>
+        <ul class="dropdown courses">
+          <li>
+            <span class="code">Challenge</span>
+            <a href="https://archeana.github.io/JS30/">30 days of JS</a>
+          </li>
+          <li>
+            <span class="code">Group project</span>
+            <a href="https://archeana.github.io/group-6-health/fitness-tracker/index.html">Fitness App</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Other Links</a>
+        <ul class="dropdown dropdown3">
+          <li><a class="button" href="https://www.linkedin.com/in/ana-jesus-1644374a/">LinkedIn</a></li>
+          <li><a class="button" href="https://github.com/archeana">GitHub</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
