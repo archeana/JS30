@@ -2,7 +2,7 @@ html {
     box-sizing: border-box;
     font-size: 16px;
     /* opacity: 0.7; */
-    background: url(/Day_29/ruben-ramirez-xhKG01FN2uk-unsplash\ \(1\).jpg) no-repeat center center fixed;
+    background: url(./imgbg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
