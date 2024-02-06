@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    font-size: 1.2rem;
 }
 
 *,
@@ -8,16 +9,67 @@ html {
     box-sizing: inherit;
 }
 
-html {
-    font-size: 10px;
-    background: #ffc600;
+
+body {
+    text-align: center;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 2%;
+    background-color: #193549
 }
+
+.navigation {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.card-back {
+    left: auto;
+}
+
+.card {
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    font-size: 20px;
+    background-color: #A2748B;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
 
 .photobooth {
     background: white;
     max-width: 150rem;
     margin: 2rem auto;
     border-radius: 2px;
+}
+
+
+.controls button{
+    color: white;
+    background-color: #193549;
+    cursor: pointer;
+    padding: 1%;
+    margin: 2%;
 }
 
 /*clearfix*/
