@@ -5,7 +5,7 @@
      font-family: sans-serif;
  }
 
- h1 {
+ h1, h2, h3, p {
      display: flex;
      align-items: center;
      justify-content: center;
@@ -103,7 +103,75 @@
  }
 
 
+ /* Projects show case */
+ .container-projects {
+     margin: 2%;
+     display: flex;
+     align-items: center;
+ }
 
+ .projects {
+     display: grid;
+     grid-template-columns: repeat(5, 1fr);
+     grid-template-rows: repeat(5, 1fr);
+     grid-column-gap: 15px;
+     grid-row-gap: 15px;
+ }
+
+ .projects-cards{
+    background-color:#DED7F2;
+    border-radius: 15px; 
+}
+ img {
+     overflow-clip-margin: content-box;
+     display: block;
+     width: 100%;
+ }
+
+
+ /* text */
+ h4 {
+    text-align: center;
+ }
+
+ .tags{
+    color: blue;
+    font-style: italic;
+    line-height: auto;
+    font-size: 12px;
+    text-align: center;
+    text-wrap:balance;
+ }
+
+ /* to make the tags it is using the list property and then set it to display inline */
+ li{ 
+    padding: 1%;
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 10px;
+    list-style: none;
+    display: inline-block;
+ }
+
+
+ /* button for projects */
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ button{
+    background-color: #A2748B;
+    color: #ffffff;
+    border:transparent;
+    padding: 9px;
+    margin:5%;
+    align-items: center;
+    border-radius: 10px;
+    cursor:pointer;
+
+ }
  footer {
      margin: 2%;
      display: flex;
