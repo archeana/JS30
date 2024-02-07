@@ -1,186 +1,253 @@
- body,
- html {
-     margin: 0;
-     padding: 0;
-     font-family: sans-serif;
- }
-
- h1, h2, h3, p {
-     display: flex;
-     align-items: center;
-     justify-content: center;
- }
-
- .card-back a {
-     color: #ffffff;
-     text-decoration: none;
- }
-
- .container {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     margin: 0;
-     background-color: #DED7F2;
- }
-
- .card-container {
-     height: 100vh;
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     gap: 10px;
-     max-width: 700px;
- }
-
- .card {
-     width: 80px;
-     height: 80px;
-     margin: 5px;
-     font-size: 16px;
-     background-color: #A2748B;
-     color: #ffffff;
-     border: none;
-     border-radius: 5px;
-     cursor: pointer;
-     overflow: hidden;
-     transition: 1s ease;
-     text-align: center;
-     align-items: center;
-     line-height: 24px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     position: relative;
-     transform-style: preserve-3d;
-     backface-visibility: hidden;
-     /* Apply backface-visibility to hid the back card */
- }
-
- .card:hover .card-inner {
-     transform: rotateY(180deg);
- }
-
- .card-inner {
-     width: 100%;
-     height: 100%;
-     position: absolute;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     transform-style: preserve-3d;
- }
-
- .flipped .card-inner {
-     transform: rotateY(180deg);
- }
-
- .card-front,
- .card-back {
-     width: 100%;
-     height: 100%;
-     position: absolute;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     /* Center horizontally */
-     backface-visibility: hidden;
- }
-
- .card-front {
-     background-color: #A2748B;
-     color: white;
-     z-index: 2;
- }
-
- .card-back {
-     background-color: #204448;
-     color: white;
-     transform: rotateY(180deg);
-     z-index: 1;
- }
-
-
- /* Projects show case */
- .container-projects {
-     margin: 2%;
-     display: flex;
-     align-items: center;
- }
-
- .projects {
-     display: grid;
-     grid-template-columns: repeat(5, 1fr);
-     grid-template-rows: repeat(5, 1fr);
-     grid-column-gap: 15px;
-     grid-row-gap: 15px;
- }
-
- .projects-cards{
-    background-color:#DED7F2;
-    border-radius: 15px; 
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
- img {
-     overflow-clip-margin: content-box;
-     display: block;
-     width: 100%;
- }
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
 
 
- /* text */
- h4 {
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-back a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: #DED7F2;
+}
+
+.card-container {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 700px;
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #A2748B;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1s ease;
     text-align: center;
- }
+    align-items: center;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    /* Apply backface-visibility to hid the back card */
+}
 
- .tags{
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Center horizontally */
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #A2748B;
+    color: white;
+    z-index: 2;
+}
+
+.card-back {
+    background-color: #204448;
+    color: white;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+
+/* Projects show case */
+.container-projects {
+    margin: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+
+.projects-cards {
+    background-color: #DED7F2;
+    border-radius: 15px;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    display: block;
+    width: 100%;
+}
+
+
+/* text */
+h4 {
+    text-align: center;
+}
+
+.tags {
     color: blue;
     font-style: italic;
     line-height: auto;
     font-size: 12px;
     text-align: center;
-    text-wrap:balance;
- }
+    text-wrap: balance;
+}
 
- /* to make the tags it is using the list property and then set it to display inline */
- li{ 
+/* to make the tags it is using the list property and then set it to display inline */
+li {
     padding: 1%;
     background-color: aliceblue;
     border-radius: 20px;
     padding: 10px;
     list-style: none;
     display: inline-block;
- }
+}
 
 
- /* button for projects */
+/* button for projects */
 .buttons {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
- button{
+button {
     background-color: #A2748B;
     color: #ffffff;
-    border:transparent;
+    border: transparent;
     padding: 9px;
-    margin:5%;
+    margin: 5%;
     align-items: center;
     border-radius: 10px;
-    cursor:pointer;
+    cursor: pointer;
 
- }
- footer {
-     margin: 2%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+}
 
- }
+footer {
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
- a {
-     text-decoration: none;
+}
 
- }
+a {
+    text-decoration: none;
+
+}
